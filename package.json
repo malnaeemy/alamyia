@@ -1,0 +1,22 @@
+{
+  "name": "al3alamia-liltaka-alshamsia",
+  "version": "1.0.0",
+  "description": "مشروع الطاقة الشمسية - العالمية للطاقة الشمسية",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "solar",
+    "energy",
+    "مشروع",
+    "العالمية للطاقة الشمسية"
+  ],
+  "author": "اسمك",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^11.2.2",
+    "tsparticles": "^3.8.1"
+  }
+}
