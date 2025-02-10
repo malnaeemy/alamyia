@@ -21,7 +21,20 @@
         rgba(49,95,177, 0.06) 100%
       );
       color: #000;
-      font-size: 16px; /* حجم الخط الافتراضي */
+      font-size: 16px;
+    }
+
+    /* حاوية الشعار */
+    .logo-container {
+      text-align: center;
+      margin: 20px auto 0 auto;
+    }
+    .logo-container img {
+      width: 150px;
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     /* الهيدر */
@@ -33,19 +46,28 @@
     }
     header h1 {
       color: #fff;
-      font-size: 2.5rem; /* قللناه ليتناسب مع الأجهزة الصغيرة */
+      font-size: 2.5rem;
       margin: 0;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
-    /* الفاصل */
+    /* نص تعريفي تحت الهيدر */
+    .intro-text {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 15px auto;
+      font-weight: 600;
+      color: #000;
+    }
+
+    /* فاصل برتقالي */
     .separator {
       border: none;
       border-top: 3px solid #F7A423;
       margin: 0;
     }
 
-    /* بطاقات المشاريع (عرض عمودي) */
+    /* البطاقة لكل مشروع (عرض عمودي) */
     .project-card {
       max-width: 1000px;
       margin: 20px auto;
@@ -53,29 +75,21 @@
       overflow: hidden;
       background: #ccc;
     }
-    /* عنوان المشروع (مستطيل رمادي) */
+
+    /* العنوان الرمادي: نص (منظومة حجم XX امبير في منطقة YY) */
     .project-title {
       background-color: #dedede;
       padding: 20px;
       text-align: center;
       font-weight: 700;
-      font-size: 1.3rem; /* قللناه قليلاً */
+      font-size: 1.3rem; 
       color: #000;
-    }
-    /* العنوان الفرعي (مستطيل برتقالي) */
-    .project-subtitle {
-      background-color: #F7A423;
-      padding: 15px;
-      text-align: center;
-      font-size: 1.1rem; /* قللناه قليلاً */
-      font-weight: 700;
-      color: #fff;
     }
 
     /* السلايدر */
     .swiper-container {
       width: 100%;
-      height: 700px; /* قللنا الارتفاع إلى 700 */
+      height: 700px;
       background: #000;
       position: relative;
     }
@@ -103,6 +117,14 @@
       border-radius: 50%;
     }
 
+    /* شريط أزرق (مثل الهيدر) بين المشاريع */
+    .blue-separator {
+      width: 100%;
+      height: 30px;
+      background: linear-gradient(135deg, #315FB1, #1f3c7a);
+      margin: 20px 0;
+    }
+
     /* Media Query للشاشات الأصغر من 768px */
     @media (max-width: 768px) {
       header h1 {
@@ -111,27 +133,41 @@
       .project-title {
         font-size: 1rem;
       }
-      .project-subtitle {
-        font-size: 0.9rem;
-      }
       .swiper-container {
-        height: 400px; /* تقليل ارتفاع السلايدر للأجهزة الصغيرة */
+        height: 400px; /* تقليل ارتفاع السلايدر في الهاتف */
+      }
+      .logo-container img {
+        width: 120px;
+      }
+      .intro-text {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- قسم الشعار أعلى الصفحة -->
+  <div class="logo-container">
+    <!-- غيّر src حسب اسم ملف شعارك -->
+    <img src="logo.png" alt="شعار العالمية للطاقة الشمسية">
+  </div>
+
   <!-- الهيدر -->
   <header>
     <h1>العالمية للطاقة الشمسية</h1>
   </header>
+
+  <!-- نص تعريفي تحت الهيدر -->
+  <div class="intro-text">
+    نبذة عن بعض المشاريع التي قمنا بتنفيذها
+  </div>
+
   <hr class="separator" />
 
-  <!-- بطاقة 1: مشروع عويريج (30 أمبير) [1..15] -->
+  <!-- بطاقة 1: عويريج (30 أمبير) - صور 1..15 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 30 امبير</div>
-    <div class="project-subtitle">مشروع عويريج</div>
+    <div class="project-title">منظومة حجم 30 امبير في منطقة عويريج</div>
     <div class="swiper-container mySwiper1">
       <div class="swiper-wrapper">
         <!-- صور 1..15 -->
@@ -154,11 +190,12 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <!-- فاصل أزرق بعد المشروع الأول -->
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 2: مشروع شارع فلسطين (70 أمبير) [1..18] -->
+  <!-- بطاقة 2: شارع فلسطين (70 أمبير) - صور 1..18 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 70 امبير</div>
-    <div class="project-subtitle">مشروع شارع فلسطين</div>
+    <div class="project-title">منظومة حجم 70 امبير في منطقة شارع فلسطين</div>
     <div class="swiper-container mySwiper2">
       <div class="swiper-wrapper">
         <!-- صور 1..18 -->
@@ -184,11 +221,11 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 3: مشروع شارع المغرب (15 أمبير) [1..14] -->
+  <!-- بطاقة 3: شارع المغرب (15 أمبير) - صور 1..14 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 15 امبير</div>
-    <div class="project-subtitle">شارع المغرب</div>
+    <div class="project-title">منظومة حجم 15 امبير في منطقة شارع المغرب</div>
     <div class="swiper-container mySwiper3">
       <div class="swiper-wrapper">
         <!-- صور 1..14 -->
@@ -210,11 +247,11 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 4: مشروع ديالى (30 أمبير) [1..16] -->
+  <!-- بطاقة 4: ديالى (30 أمبير) - صور 1..16 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 30 امبير</div>
-    <div class="project-subtitle">مشروع ديالى</div>
+    <div class="project-title">منظومة حجم 30 امبير في منطقة ديالى</div>
     <div class="swiper-container mySwiper4">
       <div class="swiper-wrapper">
         <!-- صور 1..16 -->
@@ -238,11 +275,11 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 5: مشروع جامعة بغداد (33 كيلو) [1..16] -->
+  <!-- بطاقة 5: جامعة بغداد (33 كيلو) - صور 1..16 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 33 امبير</div>
-    <div class="project-subtitle">مشروع جامعة بغداد 33 كيلو</div>
+    <div class="project-title">منظومة حجم 33 امبير في منطقة جامعة بغداد</div>
     <div class="swiper-container mySwiper5">
       <div class="swiper-wrapper">
         <!-- صور 1..16 -->
@@ -266,11 +303,11 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 6: مشروع تكريت-2 (20 أمبير) [1..14] -->
+  <!-- بطاقة 6: تكريت-2 (20 أمبير) - صور 1..14 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير</div>
-    <div class="project-subtitle">مشروع تكريت-2</div>
+    <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت-2</div>
     <div class="swiper-container mySwiper6">
       <div class="swiper-wrapper">
         <!-- صور 1..14 -->
@@ -292,11 +329,11 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 7: تكريت 1 (20 أمبير) [1..5] -->
+  <!-- بطاقة 7: تكريت 1 (20 أمبير) - صور 1..5 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير</div>
-    <div class="project-subtitle">موقع تكريت 1</div>
+    <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت 1</div>
     <div class="swiper-container mySwiper7">
       <div class="swiper-wrapper">
         <!-- صور 1..5 -->
@@ -309,11 +346,11 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <div class="blue-separator"></div>
 
-  <!-- بطاقة 8: بوب الشام (20 أمبير) [1..16] -->
+  <!-- بطاقة 8: بوب الشام (20 أمبير) - صور 1..16 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير</div>
-    <div class="project-subtitle">مشروع بوب الشام</div>
+    <div class="project-title">منظومة حجم 20 امبير في منطقة بوب الشام</div>
     <div class="swiper-container mySwiper8">
       <div class="swiper-wrapper">
         <!-- صور 1..16 -->
@@ -337,73 +374,50 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+  <!-- لا فاصل أزرق هنا بعد آخر مشروع (يمكنك إضافته إن شئت) -->
 
   <!-- مكتبة Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    // عويريج (30 أمبير) - 15 صورة
+    /* 1) عويريج (30 أمبير) - 15 صورة */
     var swiper1 = new Swiper(".mySwiper1", {
       loop: true,
-      pagination: {
-        el: ".mySwiper1 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true },
     });
-    // شارع فلسطين (70 أمبير) - 18 صورة
+    /* 2) شارع فلسطين (70 أمبير) - 18 صورة */
     var swiper2 = new Swiper(".mySwiper2", {
       loop: true,
-      pagination: {
-        el: ".mySwiper2 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true },
     });
-    // شارع المغرب (15 أمبير) - 14 صورة
+    /* 3) شارع المغرب (15 أمبير) - 14 صورة */
     var swiper3 = new Swiper(".mySwiper3", {
       loop: true,
-      pagination: {
-        el: ".mySwiper3 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true },
     });
-    // ديالى (30 أمبير) - 16 صورة
+    /* 4) ديالى (30 أمبير) - 16 صورة */
     var swiper4 = new Swiper(".mySwiper4", {
       loop: true,
-      pagination: {
-        el: ".mySwiper4 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true },
     });
-    // جامعة بغداد (33 كيلو) - 16 صورة
+    /* 5) جامعة بغداد (33 كيلو) - 16 صورة */
     var swiper5 = new Swiper(".mySwiper5", {
       loop: true,
-      pagination: {
-        el: ".mySwiper5 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true },
     });
-    // تكريت-2 (20 أمبير) - 14 صورة
+    /* 6) تكريت-2 (20 أمبير) - 14 صورة */
     var swiper6 = new Swiper(".mySwiper6", {
       loop: true,
-      pagination: {
-        el: ".mySwiper6 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true },
     });
-    // تكريت 1 (20 أمبير) - 5 صور
+    /* 7) تكريت 1 (20 أمبير) - 5 صور */
     var swiper7 = new Swiper(".mySwiper7", {
       loop: true,
-      pagination: {
-        el: ".mySwiper7 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true },
     });
-    // بوب الشام (20 أمبير) - 16 صورة
+    /* 8) بوب الشام (20 أمبير) - 16 صورة */
     var swiper8 = new Swiper(".mySwiper8", {
       loop: true,
-      pagination: {
-        el: ".mySwiper8 .swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true },
     });
   </script>
 </body>
