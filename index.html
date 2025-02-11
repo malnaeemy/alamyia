@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>العالمية للطاقة الشمسية</title>
   <!-- خط Cairo -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
   <!-- مكتبة Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
@@ -14,20 +17,22 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg,
-        #EBF0EF 0%,
-        rgba(247,164,35,0.06) 40%,
-        rgba(49,95,177,0.06) 100%
+      font-family: "Cairo", sans-serif;
+      font-size: 14px; /* تصغير حجم الخط الافتراضي */
+      background: linear-gradient(
+        135deg,
+        #ebf0ef 0%,
+        rgba(247, 164, 35, 0.06) 40%,
+        rgba(49, 95, 177, 0.06) 100%
       );
       color: #000;
-      font-size: 16px;
     }
 
     /* حاوية الشعار */
     .logo-container {
       text-align: center;
-      margin: 20px auto 0 auto;
+      /* قللنا المسافة بين الشعار والهيدر */
+      margin: 10px auto; 
     }
     .logo-container img {
       width: 150px;
@@ -37,16 +42,25 @@
       margin: 0 auto;
     }
 
+    /* فاصل برتقالي */
+    .separator {
+      border: none;
+      border-top: 3px solid #f7a423;
+      margin: 0; /* لضمان ملاصقته للهيدر */
+    }
+
     /* الهيدر */
     header {
-      background: linear-gradient(135deg, #315FB1, #1f3c7a);
-      padding: 30px 0;
+      background: linear-gradient(135deg, #315fb1, #1f3c7a);
+      /* قللنا الارتفاع عن طريق تقليل الـ Padding */
+      padding: 20px 0;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      margin: 0; /* لضمان التصاقه بالـ hr البرتقالي */
     }
     header h1 {
       color: #fff;
-      font-size: 2.5rem;
+      font-size: 2rem; 
       margin: 0;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
@@ -54,20 +68,13 @@
     /* نص تعريفي تحت الهيدر */
     .intro-text {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 15px auto;
       font-weight: 600;
       color: #000;
     }
 
-    /* فاصل برتقالي */
-    .separator {
-      border: none;
-      border-top: 3px solid #F7A423;
-      margin: 0;
-    }
-
-    /* البطاقة لكل مشروع (عرض عمودي) */
+    /* بطاقات المشاريع (عرض عمودي) */
     .project-card {
       max-width: 1000px;
       margin: 20px auto;
@@ -81,14 +88,14 @@
       padding: 20px;
       text-align: center;
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #000;
     }
 
     /* السلايدر */
     .swiper-container {
       width: 100%;
-      height: 700px;
+      height: 900px; /* ارتفاع كبير للعرض المكتبي */
       background: #000;
       position: relative;
     }
@@ -104,53 +111,56 @@
       background: #fff;
     }
     .swiper-pagination-bullet-active {
-      background: #F7A423;
+      background: #f7a423;
     }
 
     /* الأزرار (اختياري) */
     .swiper-button-next,
     .swiper-button-prev {
-      color: #F7A423;
+      color: #f7a423;
       background: rgba(0,0,0,0.3);
       padding: 8px;
       border-radius: 50%;
     }
 
-    /* شريط أزرق (مثل الهيدر) بين المشاريع */
+    /* شريط أزرق بين المشاريع */
     .blue-separator {
       width: 100%;
       height: 30px;
-      background: linear-gradient(135deg, #315FB1, #1f3c7a);
+      background: linear-gradient(135deg, #315fb1, #1f3c7a);
       margin: 20px 0;
     }
 
     /* Media Query للشاشات الأصغر من 768px */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; 
       }
       .project-title {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .swiper-container {
-        height: 400px; /* تقليل ارتفاع السلايدر للهاتف */
+        height: 500px; /* بدل 900px في الهواتف */
       }
       .logo-container img {
         width: 120px;
       }
       .intro-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- قسم الشعار أعلى الصفحة -->
+  <!-- الشعار أعلى الصفحة -->
   <div class="logo-container">
-    <!-- عدل src وفق اسم ملف شعارك وامتداده -->
+    <!-- عدل src حسب اسم ملف الشعار -->
     <img src="logo.png" alt="شعار العالمية للطاقة الشمسية">
   </div>
+
+  <!-- الخط البرتقالي فوق الهيدر -->
+  <hr class="separator" />
 
   <!-- الهيدر -->
   <header>
@@ -162,14 +172,14 @@
     نبذة عن بعض المشاريع التي قمنا بتنفيذها
   </div>
 
+  <!-- الخط البرتقالي تحت الهيدر -->
   <hr class="separator" />
 
-  <!-- 1) الغدير (75 أمبير) - 15 صورة (مثلاً) -->
+  <!-- (1) الغدير (75 امبير) - صور من 1..12 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير في منطقة الغدير</div>
-    <div class="swiper-container mySwiper9">
+    <div class="project-title">منظومة حجم 75 امبير في منطقة الغدير</div>
+    <div class="swiper-container mySwiper1">
       <div class="swiper-wrapper">
-        <!-- صور 1..15 -->
         <div class="swiper-slide"><img src="images/الغدير/1.jpg" alt="صورة 1"></div>
         <div class="swiper-slide"><img src="images/الغدير/2.jpg" alt="صورة 2"></div>
         <div class="swiper-slide"><img src="images/الغدير/3.jpg" alt="صورة 3"></div>
@@ -182,48 +192,164 @@
         <div class="swiper-slide"><img src="images/الغدير/10.jpg" alt="صورة 10"></div>
         <div class="swiper-slide"><img src="images/الغدير/11.jpg" alt="صورة 11"></div>
         <div class="swiper-slide"><img src="images/الغدير/12.jpg" alt="صورة 12"></div>
-        <div class="swiper-slide"><img src="images/الغدير/13.jpg" alt="صورة 13"></div>
-        <div class="swiper-slide"><img src="images/الغدير/14.jpg" alt="صورة 14"></div>
-        <div class="swiper-slide"><img src="images/الغدير/15.jpg" alt="صورة 15"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </div>
   <div class="blue-separator"></div>
 
-  <!-- 2) عويريج (30 أمبير) - صور 1..15 -->
+  <!-- (2) بوب الشام (20 امبير) - صور 1..16 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 30 امبير في منطقة عويريج</div>
-    <div class="swiper-container mySwiper1">
-      <div class="swiper-wrapper">
-        <!-- صور 1..15 -->
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/2.jpg" alt="صورة 2"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/3.jpg" alt="صورة 3"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/4.jpg" alt="صورة 4"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/5.jpg" alt="صورة 5"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/6.jpg" alt="صورة 6"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/7.jpg" alt="صورة 7"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/8.jpg" alt="صورة 8"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/9.jpg" alt="صورة 9"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/10.jpg" alt="صورة 10"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/11.jpg" alt="صورة 11"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/12.jpg" alt="صورة 12"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/13.jpg" alt="صورة 13"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/14.jpg" alt="صورة 14"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/15.jpg" alt="صورة 15"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-
-  <!-- 3) شارع فلسطين (70 أمبير) - صور 1..18 -->
-  <div class="project-card">
-    <div class="project-title">منظومة حجم 70 امبير في منطقة شارع فلسطين</div>
+    <div class="project-title">منظومة حجم 20 امبير في منطقة بوب الشام</div>
     <div class="swiper-container mySwiper2">
       <div class="swiper-wrapper">
-        <!-- صور 1..18 -->
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/10.jpg" alt="صورة 10"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/11.jpg" alt="صورة 11"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/12.jpg" alt="صورة 12"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/13.jpg" alt="صورة 13"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/14.jpg" alt="صورة 14"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/15.jpg" alt="صورة 15"></div>
+        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/16.jpg" alt="صورة 16"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (3) تكريت 1 (20 امبير) - صور 1..5 -->
+  <div class="project-card">
+    <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت 1</div>
+    <div class="swiper-container mySwiper3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/5.jpg" alt="صورة 5"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (4) تكريت-2 (20 امبير) - صور 1..14 -->
+  <div class="project-card">
+    <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت-2</div>
+    <div class="swiper-container mySwiper4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/10.jpg" alt="صورة 10"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/11.jpg" alt="صورة 11"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/12.jpg" alt="صورة 12"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/13.jpg" alt="صورة 13"></div>
+        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/14.jpg" alt="صورة 14"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (5) جامعة بغداد (33 امبير) - صور 1..16 -->
+  <div class="project-card">
+    <div class="project-title">منظومة حجم 33 امبير في منطقة جامعة بغداد</div>
+    <div class="swiper-container mySwiper5">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/10.jpg" alt="صورة 10"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/11.jpg" alt="صورة 11"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/12.jpg" alt="صورة 12"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/13.jpg" alt="صورة 13"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/14.jpg" alt="صورة 14"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/15.jpg" alt="صورة 15"></div>
+        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/16.jpg" alt="صورة 16"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (6) ديالى (30 امبير) - صور 1..16 -->
+  <div class="project-card">
+    <div class="project-title">منظومة حجم 30 امبير في منطقة ديالى</div>
+    <div class="swiper-container mySwiper6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/10.jpg" alt="صورة 10"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/11.jpg" alt="صورة 11"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/12.jpg" alt="صورة 12"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/13.jpg" alt="صورة 13"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/14.jpg" alt="صورة 14"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/15.jpg" alt="صورة 15"></div>
+        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/16.jpg" alt="صورة 16"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (7) شارع المغرب (15 امبير) - صور 1..14 -->
+  <div class="project-card">
+    <div class="project-title">منظومة حجم 15 امبير في منطقة شارع المغرب</div>
+    <div class="swiper-container mySwiper7">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/10.jpg" alt="صورة 10"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/11.jpg" alt="صورة 11"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/12.jpg" alt="صورة 12"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/13.jpg" alt="صورة 13"></div>
+        <div class="swiper-slide"><img src="images/موقع شارع المغرب/14.jpg" alt="صورة 14"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (8) شارع فلسطين (70 امبير) - صور 1..18 -->
+  <div class="project-card">
+    <div class="project-title">منظومة حجم 70 امبير في منطقة شارع فلسطين</div>
+    <div class="swiper-container mySwiper8">
+      <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/1.jpg" alt="صورة 1"></div>
         <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/2.jpg" alt="صورة 2"></div>
         <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/3.jpg" alt="صورة 3"></div>
@@ -248,180 +374,87 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- 4) شارع المغرب (15 أمبير) - صور 1..14 -->
+  <!-- (9) عويريج (30 امبير) - صور 1..15 -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 15 امبير في منطقة شارع المغرب</div>
-    <div class="swiper-container mySwiper3">
+    <div class="project-title">منظومة حجم 30 امبير في منطقة عويريج</div>
+    <div class="swiper-container mySwiper9">
       <div class="swiper-wrapper">
-        <!-- صور 1..14 -->
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/2.jpg" alt="صورة 2"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/3.jpg" alt="صورة 3"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/4.jpg" alt="صورة 4"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/5.jpg" alt="صورة 5"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/6.jpg" alt="صورة 6"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/7.jpg" alt="صورة 7"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/8.jpg" alt="صورة 8"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/9.jpg" alt="صورة 9"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/10.jpg" alt="صورة 10"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/11.jpg" alt="صورة 11"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/12.jpg" alt="صورة 12"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/13.jpg" alt="صورة 13"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/14.jpg" alt="صورة 14"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/10.jpg" alt="صورة 10"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/11.jpg" alt="صورة 11"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/12.jpg" alt="صورة 12"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/13.jpg" alt="صورة 13"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/14.jpg" alt="صورة 14"></div>
+        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/15.jpg" alt="صورة 15"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </div>
-  <div class="blue-separator"></div>
-
-  <!-- 5) ديالى (30 أمبير) - صور 1..16 -->
-  <div class="project-card">
-    <div class="project-title">منظومة حجم 30 امبير في منطقة ديالى</div>
-    <div class="swiper-container mySwiper4">
-      <div class="swiper-wrapper">
-        <!-- صور 1..16 -->
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/2.jpg" alt="صورة 2"></div>
-        <!-- ... تابع حتى 16.jpg ... -->
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/16.jpg" alt="صورة 16"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-
-  <!-- 6) جامعة بغداد (33 كيلو) - صور 1..16 -->
-  <div class="project-card">
-    <div class="project-title">منظومة حجم 33 امبير في منطقة جامعة بغداد</div>
-    <div class="swiper-container mySwiper5">
-      <div class="swiper-wrapper">
-        <!-- صور 1..16 -->
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/2.jpg" alt="صورة 2"></div>
-        <!-- ... تابع حتى 16.jpg ... -->
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/16.jpg" alt="صورة 16"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-
-  <!-- 7) تكريت-2 (20 أمبير) - صور 1..14 -->
-  <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت-2</div>
-    <div class="swiper-container mySwiper6">
-      <div class="swiper-wrapper">
-        <!-- صور 1..14 -->
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/2.jpg" alt="صورة 2"></div>
-        <!-- ... تابع حتى 14.jpg ... -->
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/14.jpg" alt="صورة 14"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-
-  <!-- 8) تكريت 1 (20 أمبير) - صور 1..5 -->
-  <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت 1</div>
-    <div class="swiper-container mySwiper7">
-      <div class="swiper-wrapper">
-        <!-- صور 1..5 -->
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/2.jpg" alt="صورة 2"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/3.jpg" alt="صورة 3"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/4.jpg" alt="صورة 4"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/5.jpg" alt="صورة 5"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-
-  <!-- 9) بوب الشام (20 أمبير) - صور 1..16 -->
-  <div class="project-card">
-    <div class="project-title">منظومة حجم 20 امبير في منطقة بوب الشام</div>
-    <div class="swiper-container mySwiper8">
-      <div class="swiper-wrapper">
-        <!-- صور 1..16 -->
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/1.jpg" alt="صورة 1"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/2.jpg" alt="صورة 2"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/3.jpg" alt="صورة 3"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/4.jpg" alt="صورة 4"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/5.jpg" alt="صورة 5"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/6.jpg" alt="صورة 6"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/7.jpg" alt="صورة 7"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/8.jpg" alt="صورة 8"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/9.jpg" alt="صورة 9"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/10.jpg" alt="صورة 10"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/11.jpg" alt="صورة 11"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/12.jpg" alt="صورة 12"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/13.jpg" alt="صورة 13"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/14.jpg" alt="صورة 14"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/15.jpg" alt="صورة 15"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/16.jpg" alt="صورة 16"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <!-- لا فاصل بعد آخر مشروع (يمكن إضافته إن أحببت) -->
+  <!-- لا فاصل بعد آخر مشروع -->
 
   <!-- مكتبة Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    /* 1) الغدير (20 أمبير) - 15 صورة */
-    var swiper9 = new Swiper(".mySwiper9", {
-      loop: true,
-      pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true },
-    });
-
-    /* 2) عويريج (30 أمبير) - 15 صورة */
+    /* (1) الغدير (75 امبير) - 12 صورة */
     var swiper1 = new Swiper(".mySwiper1", {
       loop: true,
       pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true },
     });
 
-    /* 3) شارع فلسطين (70 أمبير) - 18 صورة */
+    /* (2) بوب الشام (20 امبير) - 16 صورة */
     var swiper2 = new Swiper(".mySwiper2", {
       loop: true,
       pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true },
     });
 
-    /* 4) شارع المغرب (15 أمبير) - 14 صورة */
+    /* (3) تكريت 1 (20 امبير) - 5 صور */
     var swiper3 = new Swiper(".mySwiper3", {
       loop: true,
       pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true },
     });
 
-    /* 5) ديالى (30 أمبير) - 16 صورة */
+    /* (4) تكريت-2 (20 امبير) - 14 صورة */
     var swiper4 = new Swiper(".mySwiper4", {
       loop: true,
       pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true },
     });
 
-    /* 6) جامعة بغداد (33 كيلو) - 16 صورة */
+    /* (5) جامعة بغداد (33 امبير) - 16 صورة */
     var swiper5 = new Swiper(".mySwiper5", {
       loop: true,
       pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true },
     });
 
-    /* 7) تكريت-2 (20 أمبير) - 14 صورة */
+    /* (6) ديالى (30 امبير) - 16 صورة */
     var swiper6 = new Swiper(".mySwiper6", {
       loop: true,
       pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true },
     });
 
-    /* 8) تكريت 1 (20 أمبير) - 5 صور */
+    /* (7) شارع المغرب (15 امبير) - 14 صورة */
     var swiper7 = new Swiper(".mySwiper7", {
       loop: true,
       pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true },
     });
 
-    /* 9) بوب الشام (20 أمبير) - 16 صورة */
+    /* (8) شارع فلسطين (70 امبير) - 18 صورة */
     var swiper8 = new Swiper(".mySwiper8", {
       loop: true,
       pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true },
+    });
+
+    /* (9) عويريج (30 امبير) - 15 صورة */
+    var swiper9 = new Swiper(".mySwiper9", {
+      loop: true,
+      pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true },
     });
   </script>
 </body>
