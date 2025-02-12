@@ -64,17 +64,22 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
-    /* نص تعريفي تحت الهيدر (مميز) */
+    /* النص التعريفي تحت الهيدر (مؤطر في المنتصف) */
     .intro-text {
-      text-align: center;
-      margin: 15px auto;
-      font-size: 1.5rem;  /* تكبير حجم الخط */
-      font-weight: 700;   /* زيادة سماكة الخط */
-      color: #f7a423;     /* لون برتقالي */
-      /* تأثير إضاءة (Glow) */
-      text-shadow: 
-        0 0 5px rgba(247,164,35,0.7), 
-        0 0 10px rgba(247,164,35,0.5);
+      /* لتمركز العنصر في منتصف الصفحة أفقياً */
+      display: block;
+      width: fit-content;     /* يجعل عرض العنصر بمقدار النص فقط */
+      margin: 20px auto;      /* يحركه للمنتصف عبر margin auto */
+      
+      /* بقية التنسيقات */
+      font-size: 1.5rem;      /* تكبير حجم الخط */
+      font-weight: 700;       /* زيادة سماكة الخط */
+      color: #315fb1;         /* يمكنك اختيار لون مناسب */
+      border: 2px solid #f7a423;
+      padding: 10px 20px;     
+      border-radius: 8px;     
+      background-color: #fff; 
+      text-align: center;     /* للمحافظة على سطر النص وسط الإطار */
     }
 
     /* قائمة المشاريع العلوية */
@@ -175,7 +180,7 @@
         font-size: 1.6rem; 
       }
       .intro-text {
-        font-size: 1.2rem; /* تصغيره قليلاً في الشاشات الصغيرة */
+        font-size: 1.2rem;
       }
       .project-title {
         font-size: 0.9rem;
@@ -205,7 +210,7 @@
     <h1>العالمية للطاقة الشمسية</h1>
   </header>
 
-  <!-- النص التعريفي تحت الهيدر (مميز) -->
+  <!-- النص التعريفي تحت الهيدر (مؤطر في المنتصف) -->
   <div class="intro-text">
     نبذة عن بعض المشاريع التي قمنا بتنفيذها
   </div>
@@ -247,7 +252,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (2) البلديات -->
+  <!-- (2) البلديات (20 امبير) -->
   <div class="project-card" id="baladiyat">
     <div class="project-title">منظومة حجم 20 امبير في منطقة البلديات</div>
     <div class="swiper-container mySwiper2">
@@ -418,7 +423,7 @@
       pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true },
     });
 
-    /* (2) البلديات */
+    /* (2) البلديات (20 امبير) */
     var swiper2 = new Swiper(".mySwiper2", {
       loop: true,
       pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true },
