@@ -63,13 +63,17 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
-    /* نص تعريفي تحت الهيدر */
+    /* نص تعريفي تحت الهيدر - تم تمييزه */
     .intro-text {
       text-align: center;
-      font-size: 1rem;
       margin: 15px auto;
-      font-weight: 600;
-      color: #000;
+      font-size: 1.5rem;             /* تكبير حجم الخط */
+      font-weight: 700;             /* زيادة سماكة الخط */
+      color: #f7a423;               /* لون برتقالي */
+      /* تأثير إضاءة (Glow) */
+      text-shadow: 
+        0 0 5px rgba(247,164,35,0.7), 
+        0 0 10px rgba(247,164,35,0.5);
     }
 
     /* بطاقات المشاريع (عرض عمودي) */
@@ -144,7 +148,7 @@
         width: 120px;
       }
       .intro-text {
-        font-size: 0.9rem;
+        font-size: 1.2rem; /* تصغيره قليلاً في الشاشات الصغيرة */
       }
     }
   </style>
@@ -165,7 +169,7 @@
     <h1>العالمية للطاقة الشمسية</h1>
   </header>
 
-  <!-- النص التعريفي تحت الهيدر -->
+  <!-- النص التعريفي تحت الهيدر (مميز) -->
   <div class="intro-text">
     نبذة عن بعض المشاريع التي قمنا بتنفيذها
   </div>
@@ -193,7 +197,7 @@
 
   <!-- (2) البلديات -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 30 امبير في منطقة البلديات</div>
+    <div class="project-title">منظومة حجم 20 امبير في منطقة البلديات</div>
     <div class="swiper-container mySwiper2">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/البلديات/1.jpg" alt="صورة 1"></div>
@@ -283,7 +287,7 @@
 
   <!-- (7) جامعة بغداد (33 امبير) -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 130 امبير في  جامعة بغداد</div>
+    <div class="project-title">منظومة حجم 33 امبير في منطقة جامعة بغداد</div>
     <div class="swiper-container mySwiper7">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/1.jpg" alt="صورة 1"></div>
@@ -301,7 +305,7 @@
 
   <!-- (8) ديالى (30 امبير) -->
   <div class="project-card">
-    <div class="project-title">منظومة حجم 30 امبير في محافظة ديالى</div>
+    <div class="project-title">منظومة حجم 30 امبير في منطقة ديالى</div>
     <div class="swiper-container mySwiper8">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/1.jpg" alt="صورة 1"></div>
