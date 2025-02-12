@@ -11,6 +11,7 @@
   />
   <!-- مكتبة Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <style>
     /* إعدادات أساسية */
     html, body {
@@ -63,17 +64,52 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
-    /* نص تعريفي تحت الهيدر - تم تمييزه */
+    /* نص تعريفي تحت الهيدر (مميز) */
     .intro-text {
       text-align: center;
       margin: 15px auto;
-      font-size: 1.5rem;             /* تكبير حجم الخط */
-      font-weight: 700;             /* زيادة سماكة الخط */
-      color: #f7a423;               /* لون برتقالي */
+      font-size: 1.5rem;  /* تكبير حجم الخط */
+      font-weight: 700;   /* زيادة سماكة الخط */
+      color: #f7a423;     /* لون برتقالي */
       /* تأثير إضاءة (Glow) */
       text-shadow: 
         0 0 5px rgba(247,164,35,0.7), 
         0 0 10px rgba(247,164,35,0.5);
+    }
+
+    /* قائمة المشاريع العلوية */
+    .projects-nav {
+      position: sticky;        /* لجعلها ثابتة عند التمرير */
+      top: 0;
+      z-index: 1000;           /* كي تبقى فوق باقي العناصر */
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+    .projects-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px; /* بعض الحشوة لداخل القائمة */
+      display: flex;
+      flex-wrap: wrap;       /* ينتقل للسطر الثاني إذا ضاقت المساحة */
+      justify-content: center;
+    }
+    .projects-nav li {
+      margin: 5px;          /* تباعد بسيط بين العناصر */
+    }
+    .projects-nav a {
+      display: block;
+      padding: 8px 15px;
+      border-radius: 4px;
+      background: #315fb1;  /* خلفية للأزرار */
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s;
+    }
+    .projects-nav a:hover {
+      background: #f7a423;
+      color: #000;
     }
 
     /* بطاقات المشاريع (عرض عمودي) */
@@ -138,6 +174,9 @@
       header h1 {
         font-size: 1.6rem; 
       }
+      .intro-text {
+        font-size: 1.2rem; /* تصغيره قليلاً في الشاشات الصغيرة */
+      }
       .project-title {
         font-size: 0.9rem;
       }
@@ -146,9 +185,6 @@
       }
       .logo-container img {
         width: 120px;
-      }
-      .intro-text {
-        font-size: 1.2rem; /* تصغيره قليلاً في الشاشات الصغيرة */
       }
     }
   </style>
@@ -177,8 +213,24 @@
   <!-- الخط البرتقالي تحت الهيدر -->
   <hr class="separator" />
 
+  <!-- قائمة المشاريع العلوية -->
+  <nav class="projects-nav">
+    <ul>
+      <li><a href="#alghadeer">الغدير (75 امبير)</a></li>
+      <li><a href="#baladiyat">البلديات (20 امبير)</a></li>
+      <li><a href="#falasteen">شارع فلسطين (70 امبير)</a></li>
+      <li><a href="#bubasham">بوب الشام (20 امبير)</a></li>
+      <li><a href="#tikrit1">تكريت 1 (20 امبير)</a></li>
+      <li><a href="#tikrit2">تكريت-2 (20 امبير)</a></li>
+      <li><a href="#univ">جامعة بغداد (33 امبير)</a></li>
+      <li><a href="#diyala">ديالى (30 امبير)</a></li>
+      <li><a href="#morocco">شارع المغرب (15 امبير)</a></li>
+      <li><a href="#aweerij">عويريج (30 امبير)</a></li>
+    </ul>
+  </nav>
+
   <!-- (1) الغدير (75 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="alghadeer">
     <div class="project-title">منظومة حجم 75 امبير في منطقة الغدير</div>
     <div class="swiper-container mySwiper1">
       <div class="swiper-wrapper">
@@ -196,7 +248,7 @@
   <div class="blue-separator"></div>
 
   <!-- (2) البلديات -->
-  <div class="project-card">
+  <div class="project-card" id="baladiyat">
     <div class="project-title">منظومة حجم 20 امبير في منطقة البلديات</div>
     <div class="swiper-container mySwiper2">
       <div class="swiper-wrapper">
@@ -214,7 +266,7 @@
   <div class="blue-separator"></div>
 
   <!-- (3) شارع فلسطين (70 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="falasteen">
     <div class="project-title">منظومة حجم 70 امبير في منطقة شارع فلسطين</div>
     <div class="swiper-container mySwiper3">
       <div class="swiper-wrapper">
@@ -232,7 +284,7 @@
   <div class="blue-separator"></div>
 
   <!-- (4) بوب الشام (20 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="bubasham">
     <div class="project-title">منظومة حجم 20 امبير في منطقة بوب الشام</div>
     <div class="swiper-container mySwiper4">
       <div class="swiper-wrapper">
@@ -250,7 +302,7 @@
   <div class="blue-separator"></div>
 
   <!-- (5) تكريت 1 (20 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="tikrit1">
     <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت 1</div>
     <div class="swiper-container mySwiper5">
       <div class="swiper-wrapper">
@@ -268,7 +320,7 @@
   <div class="blue-separator"></div>
 
   <!-- (6) تكريت-2 (20 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="tikrit2">
     <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت-2</div>
     <div class="swiper-container mySwiper6">
       <div class="swiper-wrapper">
@@ -286,7 +338,7 @@
   <div class="blue-separator"></div>
 
   <!-- (7) جامعة بغداد (33 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="univ">
     <div class="project-title">منظومة حجم 33 امبير في منطقة جامعة بغداد</div>
     <div class="swiper-container mySwiper7">
       <div class="swiper-wrapper">
@@ -304,7 +356,7 @@
   <div class="blue-separator"></div>
 
   <!-- (8) ديالى (30 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="diyala">
     <div class="project-title">منظومة حجم 30 امبير في منطقة ديالى</div>
     <div class="swiper-container mySwiper8">
       <div class="swiper-wrapper">
@@ -322,7 +374,7 @@
   <div class="blue-separator"></div>
 
   <!-- (9) شارع المغرب (15 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="morocco">
     <div class="project-title">منظومة حجم 15 امبير في منطقة شارع المغرب</div>
     <div class="swiper-container mySwiper9">
       <div class="swiper-wrapper">
@@ -340,7 +392,7 @@
   <div class="blue-separator"></div>
 
   <!-- (10) عويريج (30 امبير) -->
-  <div class="project-card">
+  <div class="project-card" id="aweerij">
     <div class="project-title">منظومة حجم 30 امبير في منطقة عويريج</div>
     <div class="swiper-container mySwiper10">
       <div class="swiper-wrapper">
