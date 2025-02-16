@@ -144,7 +144,7 @@
     نبذة عن بعض المشاريع التي قمنا بتنفيذها
   </div>
   <hr class="separator" />
-  
+
   <!-- (1) الغدير (75 امبير) -->
   <div class="project-card" id="alghadeer">
     <div class="project-title">منظومة حجم 75 امبير في منطقة الغدير</div>
@@ -162,7 +162,7 @@
     </div>
   </div>
   <div class="blue-separator"></div>
-  
+
   <!-- (2) البلديات (20 امبير) -->
   <div class="project-card" id="baladiyat">
     <div class="project-title">منظومة حجم 20 امبير في منطقة البلديات</div>
@@ -180,7 +180,7 @@
     </div>
   </div>
   <div class="blue-separator"></div>
-  
+
   <!-- (3) شارع فلسطين (70 امبير) -->
   <div class="project-card" id="falasteen">
     <div class="project-title">منظومة حجم 70 امبير في منطقة شارع فلسطين</div>
@@ -198,10 +198,10 @@
     </div>
   </div>
   <div class="blue-separator"></div>
-  
+
   <!-- (4) المنصور (10 صور) -->
   <div class="project-card" id="mansour">
-    <div class="project-title">منظومة في منطقة المنصور</div>
+    <div class="project-title">منظومة حجم 30 أمبير في منطقة المنصور</div>
     <div class="swiper-container mySwiperNew">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/المنصور/1.jpg" alt="صورة 1" loading="lazy"></div>
@@ -219,7 +219,7 @@
     </div>
   </div>
   <div class="blue-separator"></div>
-  
+
   <!-- (5) بوب الشام (20 امبير) -->
   <div class="project-card" id="bubasham">
     <div class="project-title">منظومة حجم 20 امبير في منطقة بوب الشام</div>
@@ -344,8 +344,26 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
-  <!-- نهاية المشاريع -->
-
+  <div class="blue-separator"></div>
+  
+  <!-- (12) الجادريه (160 امبير) -->
+  <div class="project-card" id="jadriyah">
+    <div class="project-title">منظومة حجم 160 امبير في منطقة الجادريه</div>
+    <div class="swiper-container mySwiper11">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/الجادريه/1.jpg" alt="صورة 1" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/الجادريه/2.jpg" alt="صورة 2" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/الجادريه/3.jpg" alt="صورة 3" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/الجادريه/4.jpg" alt="صورة 4" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/الجادريه/5.jpg" alt="صورة 5" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/الجادريه/6.jpg" alt="صورة 6" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/الجادريه/7.jpg" alt="صورة 7" loading="lazy"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+  
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
@@ -403,6 +421,11 @@
       loop: true,
       lazy: { loadPrevNext: true },
       pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true }
+    });
+    var swiper11 = new Swiper(".mySwiper11", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper11 .swiper-pagination", clickable: true }
     });
   </script>
 </body>
