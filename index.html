@@ -2,16 +2,12 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>العالمية للطاقة الشمسية</title>
   <!-- خط Cairo -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
   <!-- مكتبة Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
   <style>
     /* إعدادات أساسية */
     html, body {
@@ -19,20 +15,13 @@
       padding: 0;
       box-sizing: border-box;
       font-family: "Cairo", sans-serif;
-      font-size: 14px; /* تصغير حجم الخط الافتراضي */
-      background: linear-gradient(
-        135deg,
-        #ebf0ef 0%,
-        rgba(247, 164, 35, 0.06) 40%,
-        rgba(49, 95, 177, 0.06) 100%
-      );
+      font-size: 14px;
+      background: linear-gradient(135deg, #ebf0ef 0%, rgba(247,164,35,0.06) 40%, rgba(49,95,177,0.06) 100%);
       color: #000;
     }
-
-    /* حاوية الشعار */
     .logo-container {
       text-align: center;
-      margin: 10px auto; /* تقليل المسافة بين الشعار والهيدر */
+      margin: 10px auto;
     }
     .logo-container img {
       width: 150px;
@@ -41,21 +30,17 @@
       display: block;
       margin: 0 auto;
     }
-
-    /* فاصل برتقالي */
     .separator {
       border: none;
       border-top: 3px solid #f7a423;
-      margin: 0; /* لضمان ملاصقته للعناصر */
+      margin: 0;
     }
-
-    /* الهيدر */
     header {
       background: linear-gradient(135deg, #315fb1, #1f3c7a);
-      padding: 20px 0; /* قللنا الـ padding لتصغير ارتفاعه */
+      padding: 20px 0;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      margin: 0; /* لضمان التصاقه بالـ hr البرتقالي */
+      margin: 0;
     }
     header h1 {
       color: #fff;
@@ -63,61 +48,21 @@
       margin: 0;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
-
-    /* النص التعريفي تحت الهيدر (مؤطر في المنتصف) */
+    /* النص التعريفي مؤطر ومتمركز */
     .intro-text {
-      /* لتمركز العنصر في منتصف الصفحة أفقياً */
       display: block;
-      width: fit-content;     /* يجعل عرض العنصر بمقدار النص فقط */
-      margin: 20px auto;      /* يحركه للمنتصف عبر margin auto */
-      
-      /* بقية التنسيقات */
-      font-size: 1.5rem;      /* تكبير حجم الخط */
-      font-weight: 700;       /* زيادة سماكة الخط */
-      color: #315fb1;         /* يمكنك اختيار لون مناسب */
+      width: fit-content;
+      margin: 20px auto;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #315fb1;
       border: 2px solid #f7a423;
-      padding: 10px 20px;     
-      border-radius: 8px;     
-      background-color: #fff; 
-      text-align: center;     /* للمحافظة على سطر النص وسط الإطار */
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: #fff;
+      text-align: center;
     }
-
-    /* قائمة المشاريع العلوية */
-    .projects-nav {
-      position: sticky;        /* لجعلها ثابتة عند التمرير */
-      top: 0;
-      z-index: 1000;           /* كي تبقى فوق باقي العناصر */
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-top: 10px;
-    }
-    .projects-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 10px; /* بعض الحشوة لداخل القائمة */
-      display: flex;
-      flex-wrap: wrap;       /* ينتقل للسطر الثاني إذا ضاقت المساحة */
-      justify-content: center;
-    }
-    .projects-nav li {
-      margin: 5px;          /* تباعد بسيط بين العناصر */
-    }
-    .projects-nav a {
-      display: block;
-      padding: 8px 15px;
-      border-radius: 4px;
-      background: #315fb1;  /* خلفية للأزرار */
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s, color 0.3s;
-    }
-    .projects-nav a:hover {
-      background: #f7a423;
-      color: #000;
-    }
-
-    /* بطاقات المشاريع (عرض عمودي) */
+    /* بطاقات المشاريع */
     .project-card {
       max-width: 1000px;
       margin: 20px auto;
@@ -125,7 +70,6 @@
       overflow: hidden;
       background: #ccc;
     }
-    /* العنوان الرمادي */
     .project-title {
       background-color: #dedede;
       padding: 20px;
@@ -134,11 +78,10 @@
       font-size: 1.2rem;
       color: #000;
     }
-
-    /* السلايدر */
+    /* إعدادات السلايدر */
     .swiper-container {
       width: 100%;
-      height: 900px; /* ارتفاع كبير للعرض المكتبي */
+      height: 900px;
       background: #000;
       position: relative;
     }
@@ -148,16 +91,12 @@
       object-fit: cover;
       display: block;
     }
-
-    /* النقاط */
     .swiper-pagination-bullet {
       background: #fff;
     }
     .swiper-pagination-bullet-active {
       background: #f7a423;
     }
-
-    /* الأزرار (اختياري) */
     .swiper-button-next,
     .swiper-button-prev {
       color: #f7a423;
@@ -165,19 +104,15 @@
       padding: 8px;
       border-radius: 50%;
     }
-
-    /* شريط أزرق بين المشاريع */
     .blue-separator {
       width: 100%;
       height: 30px;
       background: linear-gradient(135deg, #315fb1, #1f3c7a);
       margin: 20px 0;
     }
-
-    /* Media Query للشاشات الأصغر من 768px */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
       }
       .intro-text {
         font-size: 1.2rem;
@@ -186,7 +121,7 @@
         font-size: 0.9rem;
       }
       .swiper-container {
-        height: 500px; /* بدل 900px في الهواتف */
+        height: 500px;
       }
       .logo-container img {
         width: 120px;
@@ -195,45 +130,21 @@
   </style>
 </head>
 <body>
-
-  <!-- الشعار أعلى الصفحة -->
+  <!-- الشعار -->
   <div class="logo-container">
-    <!-- عدل src حسب اسم ملف الشعار -->
     <img src="logo.png" alt="شعار العالمية للطاقة الشمسية">
   </div>
-
-  <!-- الخط البرتقالي فوق الهيدر -->
   <hr class="separator" />
-
   <!-- الهيدر -->
   <header>
     <h1>العالمية للطاقة الشمسية</h1>
   </header>
-
-  <!-- النص التعريفي تحت الهيدر (مؤطر في المنتصف) -->
+  <!-- النص التعريفي -->
   <div class="intro-text">
     نبذة عن بعض المشاريع التي قمنا بتنفيذها
   </div>
-
-  <!-- الخط البرتقالي تحت الهيدر -->
   <hr class="separator" />
-
-  <!-- قائمة المشاريع العلوية -->
-  <nav class="projects-nav">
-    <ul>
-      <li><a href="#alghadeer">الغدير (75 امبير)</a></li>
-      <li><a href="#baladiyat">البلديات (20 امبير)</a></li>
-      <li><a href="#falasteen">شارع فلسطين (70 امبير)</a></li>
-      <li><a href="#bubasham">بوب الشام (20 امبير)</a></li>
-      <li><a href="#tikrit1">تكريت 1 (20 امبير)</a></li>
-      <li><a href="#tikrit2">تكريت-2 (20 امبير)</a></li>
-      <li><a href="#univ">جامعة بغداد (33 امبير)</a></li>
-      <li><a href="#diyala">ديالى (30 امبير)</a></li>
-      <li><a href="#morocco">شارع المغرب (15 امبير)</a></li>
-      <li><a href="#aweerij">عويريج (30 امبير)</a></li>
-    </ul>
-  </nav>
-
+  
   <!-- (1) الغدير (75 امبير) -->
   <div class="project-card" id="alghadeer">
     <div class="project-title">منظومة حجم 75 امبير في منطقة الغدير</div>
@@ -254,7 +165,7 @@
 
   <!-- (2) البلديات (20 امبير) -->
   <div class="project-card" id="baladiyat">
-    <div class="project-title">منظومة حجم 20 امبير في منطقة البلديات</div>
+    <div class="project-title">منظومة حجم 30 امبير في منطقة البلديات</div>
     <div class="swiper-container mySwiper2">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/البلديات/1.jpg" alt="صورة 1"></div>
@@ -272,7 +183,7 @@
 
   <!-- (3) شارع فلسطين (70 امبير) -->
   <div class="project-card" id="falasteen">
-    <div class="project-title">منظومة حجم 70 امبير في منطقة شارع فلسطين</div>
+    <div class="project-title">منظومة حجم 75 امبير في منطقة شارع فلسطين</div>
     <div class="swiper-container mySwiper3">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/1.jpg" alt="صورة 1"></div>
@@ -288,7 +199,28 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (4) بوب الشام (20 امبير) -->
+  <!-- (4) المنصور (المشروع الجديد) - 10 صور -->
+  <div class="project-card" id="mansour">
+    <div class="project-title">منظومة حجم 30 امبير  في منطقة المنصور</div>
+    <div class="swiper-container mySwiperNew">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/المنصور/1.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="images/المنصور/2.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="images/المنصور/3.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="images/المنصور/4.jpg" alt="صورة 4"></div>
+        <div class="swiper-slide"><img src="images/المنصور/5.jpg" alt="صورة 5"></div>
+        <div class="swiper-slide"><img src="images/المنصور/6.jpg" alt="صورة 6"></div>
+        <div class="swiper-slide"><img src="images/المنصور/7.jpg" alt="صورة 7"></div>
+        <div class="swiper-slide"><img src="images/المنصور/8.jpg" alt="صورة 8"></div>
+        <div class="swiper-slide"><img src="images/المنصور/9.jpg" alt="صورة 9"></div>
+        <div class="swiper-slide"><img src="images/المنصور/10.jpg" alt="صورة 10"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="blue-separator"></div>
+
+  <!-- (5) بوب الشام (20 امبير) -->
   <div class="project-card" id="bubasham">
     <div class="project-title">منظومة حجم 20 امبير في منطقة بوب الشام</div>
     <div class="swiper-container mySwiper4">
@@ -306,7 +238,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (5) تكريت 1 (20 امبير) -->
+  <!-- (6) تكريت 1 (20 امبير) -->
   <div class="project-card" id="tikrit1">
     <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت 1</div>
     <div class="swiper-container mySwiper5">
@@ -324,7 +256,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (6) تكريت-2 (20 امبير) -->
+  <!-- (7) تكريت-2 (20 امبير) -->
   <div class="project-card" id="tikrit2">
     <div class="project-title">منظومة حجم 20 امبير في منطقة تكريت-2</div>
     <div class="swiper-container mySwiper6">
@@ -342,7 +274,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (7) جامعة بغداد (33 امبير) -->
+  <!-- (8) جامعة بغداد (33 امبير) -->
   <div class="project-card" id="univ">
     <div class="project-title">منظومة حجم 33 امبير في منطقة جامعة بغداد</div>
     <div class="swiper-container mySwiper7">
@@ -360,7 +292,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (8) ديالى (30 امبير) -->
+  <!-- (9) ديالى (30 امبير) -->
   <div class="project-card" id="diyala">
     <div class="project-title">منظومة حجم 30 امبير في منطقة ديالى</div>
     <div class="swiper-container mySwiper8">
@@ -378,7 +310,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (9) شارع المغرب (15 امبير) -->
+  <!-- (10) شارع المغرب (15 امبير) -->
   <div class="project-card" id="morocco">
     <div class="project-title">منظومة حجم 15 امبير في منطقة شارع المغرب</div>
     <div class="swiper-container mySwiper9">
@@ -396,7 +328,7 @@
   </div>
   <div class="blue-separator"></div>
 
-  <!-- (10) عويريج (30 امبير) -->
+  <!-- (11) عويريج (30 امبير) -->
   <div class="project-card" id="aweerij">
     <div class="project-title">منظومة حجم 30 امبير في منطقة عويريج</div>
     <div class="swiper-container mySwiper10">
@@ -412,69 +344,54 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
-  <!-- لا فاصل بعد آخر مشروع -->
+  <!-- نهاية المشاريع -->
 
-  <!-- مكتبة Swiper JS -->
+  <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    /* (1) الغدير (75 امبير) */
     var swiper1 = new Swiper(".mySwiper1", {
       loop: true,
-      pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true }
     });
-
-    /* (2) البلديات (20 امبير) */
     var swiper2 = new Swiper(".mySwiper2", {
       loop: true,
-      pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true }
     });
-
-    /* (3) شارع فلسطين (70 امبير) */
     var swiper3 = new Swiper(".mySwiper3", {
       loop: true,
-      pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true }
     });
-
-    /* (4) بوب الشام (20 امبير) */
+    var swiperNew = new Swiper(".mySwiperNew", {
+      loop: true,
+      pagination: { el: ".mySwiperNew .swiper-pagination", clickable: true }
+    });
     var swiper4 = new Swiper(".mySwiper4", {
       loop: true,
-      pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true }
     });
-
-    /* (5) تكريت 1 (20 امبير) */
     var swiper5 = new Swiper(".mySwiper5", {
       loop: true,
-      pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true }
     });
-
-    /* (6) تكريت-2 (20 امبير) */
     var swiper6 = new Swiper(".mySwiper6", {
       loop: true,
-      pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true }
     });
-
-    /* (7) جامعة بغداد (33 امبير) */
     var swiper7 = new Swiper(".mySwiper7", {
       loop: true,
-      pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true }
     });
-
-    /* (8) ديالى (30 امبير) */
     var swiper8 = new Swiper(".mySwiper8", {
       loop: true,
-      pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true }
     });
-
-    /* (9) شارع المغرب (15 امبير) */
     var swiper9 = new Swiper(".mySwiper9", {
       loop: true,
-      pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true }
     });
-
-    /* (10) عويريج (30 امبير) */
     var swiper10 = new Swiper(".mySwiper10", {
       loop: true,
-      pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true },
+      pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true }
     });
   </script>
 </body>
