@@ -57,7 +57,6 @@
       margin: 0;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
-    /* النص التعريفي */
     .intro-text {
       display: block;
       width: fit-content;
@@ -71,6 +70,11 @@
       background-color: #fff;
       text-align: center;
     }
+    /* الحاوية الرئيسية لجميع المشاريع */
+    #projects-container {
+      max-width: 1200px;
+      margin: 20px auto;
+    }
     /* بطاقات المشاريع */
     .project-card {
       max-width: 1000px;
@@ -78,6 +82,7 @@
       border-radius: 5px;
       overflow: hidden;
       background: #ccc;
+      display: none; /* سيتم إظهارها تدريجيًا باستخدام jQuery */
     }
     .project-title {
       background-color: #dedede;
@@ -112,6 +117,18 @@
       background: rgba(0,0,0,0.3);
       padding: 8px;
       border-radius: 50%;
+    }
+    /* زر "تحميل المزيد" */
+    #load-more {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background: #315fb1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
     @media (max-width: 768px) {
       header h1 {
@@ -148,445 +165,386 @@
   </div>
   <hr class="separator" />
   
-  <!-- مشروع 1: الغدير (75 أمبير) -->
-  <div class="project-card" id="alghadeer">
-    <div class="project-title">منظومة حجم 75 أمبير في منطقة الغدير</div>
-    <div class="swiper-container mySwiper1">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/الغدير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغدير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغدير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغدير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغدير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغدير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغدير/7.jpg" alt="صورة 7" loading="lazy"></div>
+  <!-- حاوية المشاريع -->
+  <div id="projects-container">
+    <!-- مشروع 1: الغدير (75 أمبير) -->
+    <div class="project-card" id="alghadeer">
+      <div class="project-title">منظومة حجم 75 أمبير في منطقة الغدير</div>
+      <div class="swiper-container mySwiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/الغدير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغدير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغدير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغدير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغدير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغدير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغدير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 2: البلديات (20 أمبير) -->
+    <div class="project-card" id="baladiyat">
+      <div class="project-title">منظومة حجم 20 أمبير في منطقة البلديات</div>
+      <div class="swiper-container mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/البلديات/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البلديات/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البلديات/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البلديات/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البلديات/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البلديات/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البلديات/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 3: شارع فلسطين (70 أمبير) -->
+    <div class="project-card" id="falasteen">
+      <div class="project-title">منظومة حجم 70 أمبير في منطقة شارع فلسطين</div>
+      <div class="swiper-container mySwiper3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 4: المنصور (30 أمبير) -->
+    <div class="project-card" id="mansour">
+      <div class="project-title">منظومة حجم 30 أمبير في منطقة المنصور</div>
+      <div class="swiper-container mySwiper4">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/المنصور/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/7.jpg" alt="صورة 7" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/8.jpg" alt="صورة 8" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/9.jpg" alt="صورة 9" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/المنصور/10.jpg" alt="صورة 10" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 5: بوب الشام (20 أمبير) -->
+    <div class="project-card" id="bubasham">
+      <div class="project-title">منظومة حجم 20 أمبير في منطقة بوب الشام</div>
+      <div class="swiper-container mySwiper5">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 6: تكريت 1 (20 أمبير) -->
+    <div class="project-card" id="tikrit1">
+      <div class="project-title">منظومة حجم 20 أمبير في منطقة تكريت 1</div>
+      <div class="swiper-container mySwiper6">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 7: تكريت-2 (20 أمبير) -->
+    <div class="project-card" id="tikrit2">
+      <div class="project-title">منظومة حجم 20 أمبير في منطقة تكريت-2</div>
+      <div class="swiper-container mySwiper7">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 8: جامعة بغداد (33 أمبير) -->
+    <div class="project-card" id="univ">
+      <div class="project-title">منظومة حجم 33 أمبير في منطقة جامعة بغداد</div>
+      <div class="swiper-container mySwiper8">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 9: ديالى (30 أمبير) -->
+    <div class="project-card" id="diyala">
+      <div class="project-title">منظومة حجم 30 أمبير في منطقة ديالى</div>
+      <div class="swiper-container mySwiper9">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 10: شارع المغرب (15 أمبير) -->
+    <div class="project-card" id="morocco">
+      <div class="project-title">منظومة حجم 15 أمبير في منطقة شارع المغرب</div>
+      <div class="swiper-container mySwiper10">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع شارع المغرب/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 11: عويريج (30 أمبير) -->
+    <div class="project-card" id="aweerij">
+      <div class="project-title">منظومة حجم 30 أمبير في منطقة عويريج</div>
+      <div class="swiper-container mySwiper11">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 12: الجادريه (160 أمبير) -->
+    <div class="project-card" id="jadriyah">
+      <div class="project-title">منظومة حجم 160 أمبير في منطقة الجادريه</div>
+      <div class="swiper-container mySwiper12">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/الجادريه/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الجادريه/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الجادريه/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الجادريه/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الجادريه/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الجادريه/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الجادريه/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 13: البياع (8 أمبير) -->
+    <div class="project-card" id="bayaa">
+      <div class="project-title">منظومة حجم 8 أمبير في منطقة البياع</div>
+      <div class="swiper-container mySwiper13">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/البياع/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع/6.jpg" alt="صورة 6" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 14: الحسينية (8 أمبير) -->
+    <div class="project-card" id="husseiniyah">
+      <div class="project-title">منظومة حجم 8 أمبير في منطقة الحسينية</div>
+      <div class="swiper-container mySwiper14">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/الحسينية/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/7.jpg" alt="صورة 7" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/8.jpg" alt="صورة 8" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/9.jpg" alt="صورة 9" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/10.jpg" alt="صورة 10" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الحسينية/11.jpg" alt="صورة 11" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 15: الغزالية (40 أمبير) -->
+    <div class="project-card" id="ghazaliyah">
+      <div class="project-title">منظومة حجم 40 أمبير في منطقة الغزالية</div>
+      <div class="swiper-container mySwiper15">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/الغزالية/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/7.jpg" alt="صورة 7" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/الغزالية/8.jpg" alt="صورة 8" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 16: العطيفية (60 أمبير) -->
+    <div class="project-card" id="ateefiyah">
+      <div class="project-title">منظومة حجم 60 أمبير في منطقة العطيفية</div>
+      <div class="swiper-container mySwiper16">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/العطيفية/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/العطيفية/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/العطيفية/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/العطيفية/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/العطيفية/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/العطيفية/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/العطيفية/7.jpg" alt="صورة 7" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 17: البياع 2 (30 أمبير) -->
+    <div class="project-card" id="bayaa2">
+      <div class="project-title">منظومة حجم 30 أمبير في منطقة البياع 2</div>
+      <div class="swiper-container mySwiper17">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/البياع 2/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/7.jpg" alt="صورة 7" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/8.jpg" alt="صورة 8" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع 2/9.jpg" alt="صورة 9" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
+    
+    <!-- مشروع 18: البياع الاعلام (8 أمبير) -->
+    <div class="project-card" id="bayaaEalam">
+      <div class="project-title">منظومة حجم 8 أمبير في منطقة البياع الاعلام</div>
+      <div class="swiper-container mySwiper18">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/البياع الاعلام/1.jpg" alt="صورة 1" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/2.jpg" alt="صورة 2" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/3.jpg" alt="صورة 3" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/4.jpg" alt="صورة 4" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/5.jpg" alt="صورة 5" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/6.jpg" alt="صورة 6" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/7.jpg" alt="صورة 7" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/8.jpg" alt="صورة 8" loading="lazy"></div>
+          <div class="swiper-slide"><img src="images/البياع الاعلام/9.jpg" alt="صورة 9" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="blue-separator"></div>
   </div>
-  <div class="blue-separator"></div>
   
-  <!-- مشروع 2: البلديات (20 أمبير) -->
-  <div class="project-card" id="baladiyat">
-    <div class="project-title">منظومة حجم 20 أمبير في منطقة البلديات</div>
-    <div class="swiper-container mySwiper2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/البلديات/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البلديات/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البلديات/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البلديات/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البلديات/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البلديات/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البلديات/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 3: شارع فلسطين (70 أمبير) -->
-  <div class="project-card" id="falasteen">
-    <div class="project-title">منظومة حجم 70 أمبير في منطقة شارع فلسطين</div>
-    <div class="swiper-container mySwiper3">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع فلسطين 70 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 4: المنصور (30 أمبير) -->
-  <div class="project-card" id="mansour">
-    <div class="project-title">منظومة حجم 30 أمبير في منطقة المنصور</div>
-    <div class="swiper-container mySwiper4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/المنصور/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/7.jpg" alt="صورة 7" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/8.jpg" alt="صورة 8" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/9.jpg" alt="صورة 9" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/المنصور/10.jpg" alt="صورة 10" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 5: بوب الشام (20 أمبير) -->
-  <div class="project-card" id="bubasham">
-    <div class="project-title">منظومة حجم 20 أمبير في منطقة بوب الشام</div>
-    <div class="swiper-container mySwiper5">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع بوب الشام 20 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 6: تكريت 1 (20 أمبير) -->
-  <div class="project-card" id="tikrit1">
-    <div class="project-title">منظومة حجم 20 أمبير في منطقة تكريت 1</div>
-    <div class="swiper-container mySwiper6">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت 20 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 7: تكريت-2 (20 أمبير) -->
-  <div class="project-card" id="tikrit2">
-    <div class="project-title">منظومة حجم 20 أمبير في منطقة تكريت-2</div>
-    <div class="swiper-container mySwiper7">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع تكريت-2 20 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 8: جامعة بغداد (33 أمبير) -->
-  <div class="project-card" id="univ">
-    <div class="project-title">منظومة حجم 33 أمبير في منطقة جامعة بغداد</div>
-    <div class="swiper-container mySwiper8">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع جامعة بغداد 33 كيلو/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 9: ديالى (30 أمبير) -->
-  <div class="project-card" id="diyala">
-    <div class="project-title">منظومة حجم 30 أمبير في منطقة ديالى</div>
-    <div class="swiper-container mySwiper9">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع ديالى 30 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 10: شارع المغرب (15 أمبير) -->
-  <div class="project-card" id="morocco">
-    <div class="project-title">منظومة حجم 15 أمبير في منطقة شارع المغرب</div>
-    <div class="swiper-container mySwiper10">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع شارع المغرب/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 11: عويريج (30 أمبير) -->
-  <div class="project-card" id="aweerij">
-    <div class="project-title">منظومة حجم 30 أمبير في منطقة عويريج</div>
-    <div class="swiper-container mySwiper11">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/موقع عويريج 30 امبير/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 12: الجادريه (160 أمبير) -->
-  <div class="project-card" id="jadriyah">
-    <div class="project-title">منظومة حجم 160 أمبير في منطقة الجادريه</div>
-    <div class="swiper-container mySwiper12">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/الجادريه/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الجادريه/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الجادريه/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الجادريه/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الجادريه/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الجادريه/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الجادريه/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 13: البياع (8 أمبير) -->
-  <div class="project-card" id="bayaa">
-    <div class="project-title">منظومة حجم 8 أمبير في منطقة البياع</div>
-    <div class="swiper-container mySwiper13">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/البياع/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع/6.jpg" alt="صورة 6" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 14: الحسينية (8 أمبير) -->
-  <div class="project-card" id="husseiniyah">
-    <div class="project-title">منظومة حجم 8 أمبير في منطقة الحسينية</div>
-    <div class="swiper-container mySwiper14">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/الحسينية/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/7.jpg" alt="صورة 7" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/8.jpg" alt="صورة 8" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/9.jpg" alt="صورة 9" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/10.jpg" alt="صورة 10" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الحسينية/11.jpg" alt="صورة 11" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 15: الغزالية (40 أمبير) -->
-  <div class="project-card" id="ghazaliyah">
-    <div class="project-title">منظومة حجم 40 أمبير في منطقة الغزالية</div>
-    <div class="swiper-container mySwiper15">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/الغزالية/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/7.jpg" alt="صورة 7" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/الغزالية/8.jpg" alt="صورة 8" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 16: العطيفية (60 أمبير) -->
-  <div class="project-card" id="ateefiyah">
-    <div class="project-title">منظومة حجم 60 أمبير في منطقة العطيفية</div>
-    <div class="swiper-container mySwiper16">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/العطيفية/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/العطيفية/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/العطيفية/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/العطيفية/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/العطيفية/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/العطيفية/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/العطيفية/7.jpg" alt="صورة 7" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 17: البياع 2 (30 أمبير) -->
-  <div class="project-card" id="bayaa2">
-    <div class="project-title">منظومة حجم 30 أمبير في منطقة البياع 2</div>
-    <div class="swiper-container mySwiper17">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/البياع 2/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/7.jpg" alt="صورة 7" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/8.jpg" alt="صورة 8" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع 2/9.jpg" alt="صورة 9" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
-  
-  <!-- مشروع 18: البياع الاعلام (8 أمبير) -->
-  <div class="project-card" id="bayaaEalam">
-    <div class="project-title">منظومة حجم 8 أمبير في منطقة البياع الاعلام</div>
-    <div class="swiper-container mySwiper18">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/البياع الاعلام/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/7.jpg" alt="صورة 7" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/8.jpg" alt="صورة 8" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع الاعلام/9.jpg" alt="صورة 9" loading="lazy"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <div class="blue-separator"></div>
+  <!-- زر تحميل المزيد -->
+  <button id="load-more">تحميل المزيد</button>
   
   <!-- استيراد مكتبة Swiper وجافا سكريبت -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper1 = new Swiper(".mySwiper1", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true }
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true }
-    });
-    var swiper3 = new Swiper(".mySwiper3", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true }
-    });
-    var swiper4 = new Swiper(".mySwiper4", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true }
-    });
-    var swiper5 = new Swiper(".mySwiper5", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true }
-    });
-    var swiper6 = new Swiper(".mySwiper6", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true }
-    });
-    var swiper7 = new Swiper(".mySwiper7", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true }
-    });
-    var swiper8 = new Swiper(".mySwiper8", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true }
-    });
-    var swiper9 = new Swiper(".mySwiper9", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true }
-    });
-    var swiper10 = new Swiper(".mySwiper10", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true }
-    });
-    var swiper11 = new Swiper(".mySwiper11", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper11 .swiper-pagination", clickable: true }
-    });
-    var swiper12 = new Swiper(".mySwiper12", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper12 .swiper-pagination", clickable: true }
-    });
-    var swiper13 = new Swiper(".mySwiper13", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper13 .swiper-pagination", clickable: true }
-    });
-    var swiper14 = new Swiper(".mySwiper14", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper14 .swiper-pagination", clickable: true }
-    });
-    var swiper15 = new Swiper(".mySwiper15", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper15 .swiper-pagination", clickable: true }
-    });
-    var swiper16 = new Swiper(".mySwiper16", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper16 .swiper-pagination", clickable: true }
-    });
-    var swiper17 = new Swiper(".mySwiper17", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper17 .swiper-pagination", clickable: true }
-    });
-    var swiper18 = new Swiper(".mySwiper18", {
-      loop: true,
-      lazy: { loadPrevNext: true },
-      pagination: { el: ".mySwiper18 .swiper-pagination", clickable: true }
-    });
-  </script>
-  <!-- مثال على استخدام jQuery لإضافة وظائف lazy loading إضافية (يمكنك تخصيصه حسب الحاجة) -->
-  <script>
+    // تهيئة Swiper لكل مجموعة
+    var swiper1 = new Swiper(".mySwiper1", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true } });
+    var swiper2 = new Swiper(".mySwiper2", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true } });
+    var swiper3 = new Swiper(".mySwiper3", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true } });
+    var swiper4 = new Swiper(".mySwiper4", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true } });
+    var swiper5 = new Swiper(".mySwiper5", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true } });
+    var swiper6 = new Swiper(".mySwiper6", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true } });
+    var swiper7 = new Swiper(".mySwiper7", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true } });
+    var swiper8 = new Swiper(".mySwiper8", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true } });
+    var swiper9 = new Swiper(".mySwiper9", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true } });
+    var swiper10 = new Swiper(".mySwiper10", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true } });
+    var swiper11 = new Swiper(".mySwiper11", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper11 .swiper-pagination", clickable: true } });
+    var swiper12 = new Swiper(".mySwiper12", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper12 .swiper-pagination", clickable: true } });
+    var swiper13 = new Swiper(".mySwiper13", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper13 .swiper-pagination", clickable: true } });
+    var swiper14 = new Swiper(".mySwiper14", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper14 .swiper-pagination", clickable: true } });
+    var swiper15 = new Swiper(".mySwiper15", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper15 .swiper-pagination", clickable: true } });
+    var swiper16 = new Swiper(".mySwiper16", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper16 .swiper-pagination", clickable: true } });
+    var swiper17 = new Swiper(".mySwiper17", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper17 .swiper-pagination", clickable: true } });
+    var swiper18 = new Swiper(".mySwiper18", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper18 .swiper-pagination", clickable: true } });
+    
+    // استخدام jQuery لتقسيم المحتوى إلى أجزاء (Load More)
     $(document).ready(function(){
-      // إذا رغبت بإضافة فحص إضافي للصور عند التمرير، يمكنك استخدام jQuery هنا
-      // مثال بسيط:
-      $(window).on('scroll', function(){
-        $("img[loading='lazy']").each(function(){
-          // هنا يمكن إضافة منطق لتحديد ما إذا كانت الصورة في منطقة العرض
-          // إذا كانت الصورة في منطقة العرض، يمكن تنفيذ إجراءات إضافية (مثلاً تغيير src إذا كانت تستخدم data-src)
-        });
+      var projectsToShow = 6; // عدد المشاريع التي ستظهر في البداية
+      var allProjects = $(".project-card");
+      
+      // إخفاء جميع المشاريع ثم إظهار المجموعة الأولى
+      allProjects.hide();
+      allProjects.slice(0, projectsToShow).show();
+      
+      // عند النقر على زر "تحميل المزيد"
+      $("#load-more").click(function(){
+        projectsToShow += 6; // أضف 6 مشاريع أخرى (يمكنك تغيير الرقم)
+        allProjects.slice(0, projectsToShow).slideDown();
+        if(projectsToShow >= allProjects.length){
+          $(this).fadeOut(); // إخفاء الزر إذا تم عرض جميع المشاريع
+        }
       });
     });
   </script>
