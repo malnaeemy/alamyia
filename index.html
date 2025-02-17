@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
   <!-- مكتبة Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     /* إعدادات أساسية */
     html, body {
@@ -35,6 +37,13 @@
       border-top: 3px solid #f7a423;
       margin: 0;
     }
+    .blue-separator {
+      width: 100%;
+      height: 30px;
+      background: linear-gradient(135deg, #315fb1, #1f3c7a);
+      margin: 20px 0;
+      border: none;
+    }
     header {
       background: linear-gradient(135deg, #315fb1, #1f3c7a);
       padding: 20px 0;
@@ -48,7 +57,7 @@
       margin: 0;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
-    /* النص التعريفي مؤطر ومتمركز */
+    /* النص التعريفي */
     .intro-text {
       display: block;
       width: fit-content;
@@ -104,12 +113,6 @@
       padding: 8px;
       border-radius: 50%;
     }
-    .blue-separator {
-      width: 100%;
-      height: 30px;
-      background: linear-gradient(135deg, #315fb1, #1f3c7a);
-      margin: 20px 0;
-    }
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.6rem;
@@ -145,7 +148,7 @@
   </div>
   <hr class="separator" />
   
-  <!-- 1. الغدير (75 أمبير) -->
+  <!-- مشروع 1: الغدير (75 أمبير) -->
   <div class="project-card" id="alghadeer">
     <div class="project-title">منظومة حجم 75 أمبير في منطقة الغدير</div>
     <div class="swiper-container mySwiper1">
@@ -163,7 +166,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 2. البلديات (20 أمبير) -->
+  <!-- مشروع 2: البلديات (20 أمبير) -->
   <div class="project-card" id="baladiyat">
     <div class="project-title">منظومة حجم 20 أمبير في منطقة البلديات</div>
     <div class="swiper-container mySwiper2">
@@ -181,7 +184,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 3. شارع فلسطين (70 أمبير) -->
+  <!-- مشروع 3: شارع فلسطين (70 أمبير) -->
   <div class="project-card" id="falasteen">
     <div class="project-title">منظومة حجم 70 أمبير في منطقة شارع فلسطين</div>
     <div class="swiper-container mySwiper3">
@@ -199,7 +202,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 4. المنصور (30 أمبير) -->
+  <!-- مشروع 4: المنصور (30 أمبير) -->
   <div class="project-card" id="mansour">
     <div class="project-title">منظومة حجم 30 أمبير في منطقة المنصور</div>
     <div class="swiper-container mySwiper4">
@@ -220,7 +223,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 5. بوب الشام (20 أمبير) -->
+  <!-- مشروع 5: بوب الشام (20 أمبير) -->
   <div class="project-card" id="bubasham">
     <div class="project-title">منظومة حجم 20 أمبير في منطقة بوب الشام</div>
     <div class="swiper-container mySwiper5">
@@ -238,7 +241,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 6. تكريت 1 (20 أمبير) -->
+  <!-- مشروع 6: تكريت 1 (20 أمبير) -->
   <div class="project-card" id="tikrit1">
     <div class="project-title">منظومة حجم 20 أمبير في منطقة تكريت 1</div>
     <div class="swiper-container mySwiper6">
@@ -256,7 +259,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 7. تكريت-2 (20 أمبير) -->
+  <!-- مشروع 7: تكريت-2 (20 أمبير) -->
   <div class="project-card" id="tikrit2">
     <div class="project-title">منظومة حجم 20 أمبير في منطقة تكريت-2</div>
     <div class="swiper-container mySwiper7">
@@ -274,7 +277,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 8. جامعة بغداد (33 أمبير) -->
+  <!-- مشروع 8: جامعة بغداد (33 أمبير) -->
   <div class="project-card" id="univ">
     <div class="project-title">منظومة حجم 33 أمبير في منطقة جامعة بغداد</div>
     <div class="swiper-container mySwiper8">
@@ -292,7 +295,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 9. ديالى (30 أمبير) -->
+  <!-- مشروع 9: ديالى (30 أمبير) -->
   <div class="project-card" id="diyala">
     <div class="project-title">منظومة حجم 30 أمبير في منطقة ديالى</div>
     <div class="swiper-container mySwiper9">
@@ -310,7 +313,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 10. شارع المغرب (15 أمبير) -->
+  <!-- مشروع 10: شارع المغرب (15 أمبير) -->
   <div class="project-card" id="morocco">
     <div class="project-title">منظومة حجم 15 أمبير في منطقة شارع المغرب</div>
     <div class="swiper-container mySwiper10">
@@ -328,7 +331,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 11. عويريج (30 أمبير) -->
+  <!-- مشروع 11: عويريج (30 أمبير) -->
   <div class="project-card" id="aweerij">
     <div class="project-title">منظومة حجم 30 أمبير في منطقة عويريج</div>
     <div class="swiper-container mySwiper11">
@@ -346,7 +349,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 12. الجادريه (160 أمبير) -->
+  <!-- مشروع 12: الجادريه (160 أمبير) -->
   <div class="project-card" id="jadriyah">
     <div class="project-title">منظومة حجم 160 أمبير في منطقة الجادريه</div>
     <div class="swiper-container mySwiper12">
@@ -364,7 +367,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 13. البياع (8 أمبير) -->
+  <!-- مشروع 13: البياع (8 أمبير) -->
   <div class="project-card" id="bayaa">
     <div class="project-title">منظومة حجم 8 أمبير في منطقة البياع</div>
     <div class="swiper-container mySwiper13">
@@ -381,7 +384,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 14. الحسينية (8 أمبير) -->
+  <!-- مشروع 14: الحسينية (8 أمبير) -->
   <div class="project-card" id="husseiniyah">
     <div class="project-title">منظومة حجم 8 أمبير في منطقة الحسينية</div>
     <div class="swiper-container mySwiper14">
@@ -403,7 +406,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 15. الغزالية (40 أمبير) -->
+  <!-- مشروع 15: الغزالية (40 أمبير) -->
   <div class="project-card" id="ghazaliyah">
     <div class="project-title">منظومة حجم 40 أمبير في منطقة الغزالية</div>
     <div class="swiper-container mySwiper15">
@@ -422,7 +425,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 16. العطيفية (60 أمبير) -->
+  <!-- مشروع 16: العطيفية (60 أمبير) -->
   <div class="project-card" id="ateefiyah">
     <div class="project-title">منظومة حجم 60 أمبير في منطقة العطيفية</div>
     <div class="swiper-container mySwiper16">
@@ -440,7 +443,7 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 17. البياع 2 (30 أمبير) -->
+  <!-- مشروع 17: البياع 2 (30 أمبير) -->
   <div class="project-card" id="bayaa2">
     <div class="project-title">منظومة حجم 30 أمبير في منطقة البياع 2</div>
     <div class="swiper-container mySwiper17">
@@ -460,47 +463,132 @@
   </div>
   <div class="blue-separator"></div>
   
-  <!-- 18. البياع العام (30 أمبير) -->
-  <div class="project-card" id="bayaaAam">
-    <div class="project-title">منظومة حجم 30 أمبير في منطقة البياع العام</div>
+  <!-- مشروع 18: البياع الاعلام (8 أمبير) -->
+  <div class="project-card" id="bayaaEalam">
+    <div class="project-title">منظومة حجم 8 أمبير في منطقة البياع الاعلام</div>
     <div class="swiper-container mySwiper18">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/البياع العام/1.jpg" alt="صورة 1" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/2.jpg" alt="صورة 2" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/3.jpg" alt="صورة 3" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/4.jpg" alt="صورة 4" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/5.jpg" alt="صورة 5" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/6.jpg" alt="صورة 6" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/7.jpg" alt="صورة 7" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/8.jpg" alt="صورة 8" loading="lazy"></div>
-        <div class="swiper-slide"><img src="images/البياع العام/9.jpg" alt="صورة 9" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/1.jpg" alt="صورة 1" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/2.jpg" alt="صورة 2" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/3.jpg" alt="صورة 3" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/4.jpg" alt="صورة 4" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/5.jpg" alt="صورة 5" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/6.jpg" alt="صورة 6" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/7.jpg" alt="صورة 7" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/8.jpg" alt="صورة 8" loading="lazy"></div>
+        <div class="swiper-slide"><img src="images/البياع الاعلام/9.jpg" alt="صورة 9" loading="lazy"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </div>
   <div class="blue-separator"></div>
-
-  <!-- Swiper JS -->
+  
+  <!-- استيراد مكتبة Swiper وجافا سكريبت -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper1 = new Swiper(".mySwiper1", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true } });
-    var swiper2 = new Swiper(".mySwiper2", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true } });
-    var swiper3 = new Swiper(".mySwiper3", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true } });
-    var swiper4 = new Swiper(".mySwiper4", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true } });
-    var swiper5 = new Swiper(".mySwiper5", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true } });
-    var swiper6 = new Swiper(".mySwiper6", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true } });
-    var swiper7 = new Swiper(".mySwiper7", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true } });
-    var swiper8 = new Swiper(".mySwiper8", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true } });
-    var swiper9 = new Swiper(".mySwiper9", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true } });
-    var swiper10 = new Swiper(".mySwiper10", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true } });
-    var swiper11 = new Swiper(".mySwiper11", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper11 .swiper-pagination", clickable: true } });
-    var swiper12 = new Swiper(".mySwiper12", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper12 .swiper-pagination", clickable: true } });
-    var swiper13 = new Swiper(".mySwiper13", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper13 .swiper-pagination", clickable: true } });
-    var swiper14 = new Swiper(".mySwiper14", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper14 .swiper-pagination", clickable: true } });
-    var swiper15 = new Swiper(".mySwiper15", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper15 .swiper-pagination", clickable: true } });
-    var swiper16 = new Swiper(".mySwiper16", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper16 .swiper-pagination", clickable: true } });
-    var swiper17 = new Swiper(".mySwiper17", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper17 .swiper-pagination", clickable: true } });
-    var swiper18 = new Swiper(".mySwiper18", { loop: true, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper18 .swiper-pagination", clickable: true } });
+    var swiper1 = new Swiper(".mySwiper1", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true }
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true }
+    });
+    var swiper3 = new Swiper(".mySwiper3", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true }
+    });
+    var swiper4 = new Swiper(".mySwiper4", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper4 .swiper-pagination", clickable: true }
+    });
+    var swiper5 = new Swiper(".mySwiper5", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper5 .swiper-pagination", clickable: true }
+    });
+    var swiper6 = new Swiper(".mySwiper6", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper6 .swiper-pagination", clickable: true }
+    });
+    var swiper7 = new Swiper(".mySwiper7", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper7 .swiper-pagination", clickable: true }
+    });
+    var swiper8 = new Swiper(".mySwiper8", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper8 .swiper-pagination", clickable: true }
+    });
+    var swiper9 = new Swiper(".mySwiper9", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper9 .swiper-pagination", clickable: true }
+    });
+    var swiper10 = new Swiper(".mySwiper10", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper10 .swiper-pagination", clickable: true }
+    });
+    var swiper11 = new Swiper(".mySwiper11", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper11 .swiper-pagination", clickable: true }
+    });
+    var swiper12 = new Swiper(".mySwiper12", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper12 .swiper-pagination", clickable: true }
+    });
+    var swiper13 = new Swiper(".mySwiper13", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper13 .swiper-pagination", clickable: true }
+    });
+    var swiper14 = new Swiper(".mySwiper14", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper14 .swiper-pagination", clickable: true }
+    });
+    var swiper15 = new Swiper(".mySwiper15", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper15 .swiper-pagination", clickable: true }
+    });
+    var swiper16 = new Swiper(".mySwiper16", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper16 .swiper-pagination", clickable: true }
+    });
+    var swiper17 = new Swiper(".mySwiper17", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper17 .swiper-pagination", clickable: true }
+    });
+    var swiper18 = new Swiper(".mySwiper18", {
+      loop: true,
+      lazy: { loadPrevNext: true },
+      pagination: { el: ".mySwiper18 .swiper-pagination", clickable: true }
+    });
+  </script>
+  <!-- مثال على استخدام jQuery لإضافة وظائف lazy loading إضافية (يمكنك تخصيصه حسب الحاجة) -->
+  <script>
+    $(document).ready(function(){
+      // إذا رغبت بإضافة فحص إضافي للصور عند التمرير، يمكنك استخدام jQuery هنا
+      // مثال بسيط:
+      $(window).on('scroll', function(){
+        $("img[loading='lazy']").each(function(){
+          // هنا يمكن إضافة منطق لتحديد ما إذا كانت الصورة في منطقة العرض
+          // إذا كانت الصورة في منطقة العرض، يمكن تنفيذ إجراءات إضافية (مثلاً تغيير src إذا كانت تستخدم data-src)
+        });
+      });
+    });
   </script>
 </body>
 </html>
