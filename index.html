@@ -71,9 +71,9 @@
       margin: 0;
       border: none;
     }
-    /* حاوية كتلة واحدة (مشروعين) */
+    /* حاوية كتلة واحدة (مشروعين أو مشروع واحد) */
     .project-block {
-      display: none; /* ستظهر تدريجياً باستخدام jQuery */
+      display: none; /* ستظهر تدريجيًا بواسطة jQuery */
       margin: 20px auto;
       max-width: 1000px;
     }
@@ -128,6 +128,21 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+    }
+    /* تذييل الموقع */
+    footer {
+      background: linear-gradient(135deg, #315fb1, #1f3c7a);
+      padding: 20px 0;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.15);
+      margin-top: 20px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      font-weight: 700;
     }
     @media (max-width: 768px) {
       header h1 {
@@ -201,6 +216,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 2: مشروع 3 (شارع فلسطين) + مشروع 4 (المنصور) -->
@@ -241,6 +257,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 3: مشروع 5 (بوب الشام) + مشروع 6 (تكريت 1) -->
@@ -278,6 +295,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 4: مشروع 7 (تكريت-2) + مشروع 8 (جامعة بغداد) -->
@@ -315,6 +333,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 5: مشروع 9 (ديالى) + مشروع 10 (شارع المغرب) -->
@@ -352,6 +371,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 6: مشروع 11 (عويريج) + مشروع 12 (الجادريه) -->
@@ -389,6 +409,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 7: مشروع 13 (البياع) + مشروع 14 (الحسينية) -->
@@ -429,6 +450,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 8: مشروع 15 (الغزالية) + مشروع 16 (العطيفية) -->
@@ -467,6 +489,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
     </div>
 
     <!-- Block 9: مشروع 17 (البياع 2) + مشروع 18 (البياع الاعلام) -->
@@ -508,16 +531,134 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div class="blue-separator"></div>
+    </div>
+
+    <!-- Block 10: مشروع 19 (الدورة) -->
+    <div class="project-block">
+      <!-- مشروع 19: الدورة (8 صور) -->
+      <div class="project-card" id="dawra">
+        <div class="project-title">منظومة حجم 8 أمبير في منطقة الدورة</div>
+        <div class="swiper-container mySwiper19">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/الدورة/1.jpg" alt="صورة 1" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/2.jpg" alt="صورة 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/3.jpg" alt="صورة 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/4.jpg" alt="صورة 4" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/5.jpg" alt="صورة 5" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/6.jpg" alt="صورة 6" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/7.jpg" alt="صورة 7" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الدورة/8.jpg" alt="صورة 8" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="blue-separator"></div>
+    </div>
+
+    <!-- Block 11: مشروع 20 (الزعفرانية) -->
+    <div class="project-block">
+      <!-- مشروع 20: الزعفرانية (6 صور) -->
+      <div class="project-card" id="zaafrania">
+        <div class="project-title">منظومة حجم 4 أمبير في منطقة الزعفرانية</div>
+        <div class="swiper-container mySwiper20">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/الزعفرانية/1.jpg" alt="صورة 1" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الزعفرانية/2.jpg" alt="صورة 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الزعفرانية/3.jpg" alt="صورة 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الزعفرانية/4.jpg" alt="صورة 4" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الزعفرانية/5.jpg" alt="صورة 5" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الزعفرانية/6.jpg" alt="صورة 6" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="blue-separator"></div>
+    </div>
+
+    <!-- Block 12: مشروع جديد "السيدية" -->
+    <div class="project-block">
+      <!-- مشروع السيدية (11 صور) -->
+      <div class="project-card" id="sayediyah">
+        <div class="project-title">منظومة حجم 30 أمبير في منطقة السيدية</div>
+        <div class="swiper-container mySwiper21">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/السيدية/1.jpg" alt="صورة 1" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/2.jpg" alt="صورة 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/3.jpg" alt="صورة 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/4.jpg" alt="صورة 4" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/5.jpg" alt="صورة 5" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/6.jpg" alt="صورة 6" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/7.jpg" alt="صورة 7" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/8.jpg" alt="صورة 8" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/9.jpg" alt="صورة 9" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/10.jpg" alt="صورة 10" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/السيدية/11.jpg" alt="صورة 11" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="blue-separator"></div>
+    </div>
+
+    <!-- Block 13: مشروع جديد "الكاظمية" -->
+    <div class="project-block">
+      <!-- مشروع الكاظمية (8 صور) -->
+      <div class="project-card" id="kazimiyah">
+        <div class="project-title">منظومة حجم 30 أمبير في منطقة الكاظمية</div>
+        <div class="swiper-container mySwiper22">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/الكاظمية/1.jpg" alt="صورة 1" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/2.jpg" alt="صورة 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/3.jpg" alt="صورة 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/4.jpg" alt="صورة 4" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/5.jpg" alt="صورة 5" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/6.jpg" alt="صورة 6" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/7.jpg" alt="صورة 7" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكاظمية/8.jpg" alt="صورة 8" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="blue-separator"></div>
+    </div>
+
+    <!-- Block 14: مشروع جديد "الكفاح" -->
+    <div class="project-block">
+      <!-- مشروع الكفاح (9 صور) -->
+      <div class="project-card" id="alkifah">
+        <div class="project-title">منظومة حجم 30 أمبير في منطقة الكفاح</div>
+        <div class="swiper-container mySwiper23">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/الكفاح/1.jpg" alt="صورة 1" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/2.jpg" alt="صورة 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/3.jpg" alt="صورة 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/4.jpg" alt="صورة 4" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/5.jpg" alt="صورة 5" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/6.jpg" alt="صورة 6" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/7.jpg" alt="صورة 7" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/8.jpg" alt="صورة 8" loading="lazy"></div>
+            <div class="swiper-slide"><img src="images/الكفاح/9.jpg" alt="صورة 9" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="blue-separator"></div>
     </div>
   </div>
 
   <!-- زر تحميل المزيد -->
   <button id="load-more">تحميل المزيد</button>
-  
+
+  <!-- التذييل (Footer) -->
+  <footer>
+    <p>جميع الحقوق محفوظة لشركة العالمية للطاقة الشمسية 2025</p>
+  </footer>
+
   <!-- استيراد مكتبة Swiper وجافا سكريبت -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    // تهيئة Swiper لكل مشروع مع إيقاف التكرار (loop: false)
+    // تهيئة Swiper لكل مشروع مع تعطيل التكرار (loop: false)
     var swiper1 = new Swiper(".mySwiper1", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper1 .swiper-pagination", clickable: true } });
     var swiper2 = new Swiper(".mySwiper2", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper2 .swiper-pagination", clickable: true } });
     var swiper3 = new Swiper(".mySwiper3", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper3 .swiper-pagination", clickable: true } });
@@ -536,11 +677,16 @@
     var swiper16 = new Swiper(".mySwiper16", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper16 .swiper-pagination", clickable: true } });
     var swiper17 = new Swiper(".mySwiper17", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper17 .swiper-pagination", clickable: true } });
     var swiper18 = new Swiper(".mySwiper18", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper18 .swiper-pagination", clickable: true } });
+    var swiper19 = new Swiper(".mySwiper19", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper19 .swiper-pagination", clickable: true } });
+    var swiper20 = new Swiper(".mySwiper20", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper20 .swiper-pagination", clickable: true } });
+    var swiper21 = new Swiper(".mySwiper21", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper21 .swiper-pagination", clickable: true } });
+    var swiper22 = new Swiper(".mySwiper22", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper22 .swiper-pagination", clickable: true } });
+    var swiper23 = new Swiper(".mySwiper23", { loop: false, lazy: { loadPrevNext: true }, pagination: { el: ".mySwiper23 .swiper-pagination", clickable: true } });
     
-    // jQuery لتقسيم المحتوى إلى كتل وعرضها تدريجياً
+    // jQuery لتقسيم المحتوى إلى كتل وعرضها تدريجيًا
     $(document).ready(function(){
       var allBlocks = $(".project-block");
-      var blocksToShow = 1; // في البداية نعرض كتلة واحدة (مشروعين)
+      var blocksToShow = 1; // في البداية نعرض كتلة واحدة (مشروعين أو مشروع واحد)
       
       allBlocks.hide();
       allBlocks.slice(0, blocksToShow).show();
